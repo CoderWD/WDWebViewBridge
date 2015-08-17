@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JFG-Ci-dBD">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="512"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </webView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="czr-JQ-Hrg">
+                                <rect key="frame" x="84" y="527" width="153" height="30"/>
+                                <state key="normal" title="发送消息到js">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="sendMessageToJavaScriptAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="G6A-u8-IEu"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="czr-JQ-Hrg" secondAttribute="bottom" constant="11" id="Bis-yh-8wf"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="JFG-Ci-dBD" secondAttribute="bottom" constant="56" id="BtM-cS-39X"/>
+                            <constraint firstItem="JFG-Ci-dBD" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="Ldx-af-dT7"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="czr-JQ-Hrg" secondAttribute="trailing" constant="67" id="Otu-bF-lGZ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="JFG-Ci-dBD" secondAttribute="trailing" constant="-16" id="QYv-Zd-fij"/>
+                            <constraint firstItem="JFG-Ci-dBD" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-16" id="Ru0-9H-DMn"/>
+                            <constraint firstItem="czr-JQ-Hrg" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="68" id="WKX-q8-rZ7"/>
+                            <constraint firstItem="czr-JQ-Hrg" firstAttribute="top" secondItem="JFG-Ci-dBD" secondAttribute="bottom" constant="15" id="wkX-ba-a65"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="contentWebView" destination="JFG-Ci-dBD" id="f0P-vD-Pl5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="181" y="406"/>
+        </scene>
+    </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>

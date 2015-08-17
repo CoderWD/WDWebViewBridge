@@ -1,0 +1,25 @@
+<html>
+<head>   
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<script>
+	//给app发送消息，及回调方法
+	function sendMessageToApp(message){
+			AppBridge.sendMessageToApp(message,function calback(backMessage){
+				alert(backMessage);
+			});
+		}
+
+	//监听接收app发过来的消息
+	AppBridge.receiveAppMessage = function receiveAppMessage(message){
+		alert(message);
+	}
+</script>
+
+</head>
+
+<body bgcolor="#FFCC99">
+    <button style="margin-top:100px; margin-left:100px" type="button" onClick="sendMessageToApp('js发消息给app')">发动消息到App</button>
+</body>
+
+</html>
